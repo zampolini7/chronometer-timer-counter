@@ -75,8 +75,11 @@
     border: 1.5px solid rgb(114, 113, 113);
     cursor: pointer;
     border-radius: 7px;
+    padding: 10px 10px;
+    line-height: 13px;
+    font-weight: 400;
     font-size: 18px;
-    padding: auto;
+    text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.205);
     transition: 0.3s;
@@ -140,6 +143,20 @@
     justify-content: center;
 }
 
+.button.reset.tempo.off{
+    display: none;
+}
+
+.button.reset.tempo.on{
+    display: flex;
+    /* background-color: */
+    width: 180px;
+    height: 40px;
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 .container-ul-vueltasMarcadas{
     display: flex;
     flex-direction: row;
@@ -150,10 +167,10 @@
     flex-direction: row;
 }
 
-.button.decrease.visibilityOff, button.increase.visibilityOff{
+.button.decrease.visibilityOff, button.increase.visibilityOff, .button.reset.visibilityOff{
     display: none;
 }
-.button.decrease.visibilityOn, button.increase.visibilityOn{
+.button.decrease.visibilityOn, button.increase.visibilityOn, .button.reset.visibilityOn{
     /* display: flex; */
     margin: o auto;
     align-items: center;

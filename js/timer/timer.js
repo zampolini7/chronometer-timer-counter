@@ -2,7 +2,7 @@ import { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibi
 import { decreaseNumber, increaseNumber } from "../counter/counter.js";
 
 
-export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
+export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
     const d = document;
     let chronometer;
     let changeColor;
@@ -13,7 +13,7 @@ export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
                 decreaseNumber()
                 isClassOn("stopChronometer")
                 isClassof("playChronometer")
-                isClassOn("countChronometer")
+                isClassof("countChronometer")
                 isClassof("playTimer")
                 visibilityOff("playChronometer")
                 // isClassof("countChronometer")
@@ -37,7 +37,7 @@ export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
             
                 if (valueOfTextInt === 0 && valueOfMinutes === 0) {
                     clearInterval(chronometer)
-                    isClassOn("playChronometer")
+                    // isClassOn("playChronometer")
                     isClassof("stopChronometer")
 
                     visibilityOff("playChronometer")
@@ -45,8 +45,10 @@ export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
                     visibilityOff("playTimer")
                     visibilityOff("decreaseButton")                    
                     visibilityOff("increaseButton")
+                    visibilityOff("resetButton")
                     // visibilityOff("decreaseButton")
                     // visibilityOff("increaseButton")
+                    visibilityOn("resetTempo")
 
                     isClassof("stopChronometer")
                     isClassof("playChronometer")
@@ -54,7 +56,8 @@ export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
                     isClassof("playTimer")                   
                     isClassof("decreaseButton")
                     isClassof("increaseButton")
-             
+                    isClassof("resetButton")
+                    isClassOn("resetTempo")
                 
                     
 
@@ -119,6 +122,54 @@ export function Timer(btnPlay, btnStop, reset, count, eraseCount) {
             visibilityOn("decreaseButton")
             isClassOn("decreaseButton")
             isClassOn("increaseButton")
+            let clearCounter = document.getElementById("vueltasMarcadas")
+            clearCounter.innerHTML = `
+            <div id="vueltasMarcadas" >
+            <div class="container-h3-button-vueltasMarcadas"> 
+                <h3 id="span-vueltasMarcadas"></h3>
+                <button id="EraseCounterChronometer" class="button cyt count off"> Borrar vueltas </button>
+            </div>
+            <div class="container-ul-vueltasMarcadas">
+                <ol id="ul-vueltasMarcadas">
+                    
+                </ol>
+                <ol id="ul-vueltasMarcadas-diferencia">
+                    
+                </ol>
+            </div>
+            `
+        }
+        if(e.target.matches(resetTempo)) {
+            clearInterval(chronometer)
+            clearInterval(changeColor)
+            isClassof("stopChronometer")
+            isClassof("playChronometer")
+            isClassof("countChronometer")
+            isClassof("playTimer")
+            visibilityOn("playTimer")
+            visibilityOn("increaseButton")
+            visibilityOn("decreaseButton")
+            visibilityOn("resetButton")
+            visibilityOn("playChronometer")
+            isClassOn("decreaseButton")
+            isClassOn("increaseButton")
+            isClassof("resetTempo")
+
+           
+            // isClassof("stopChronometer")
+            // isClassof("playChronometer")
+            // isClassof("countChronometer")
+            // isClassof("playTimer")
+            // isClassof("resetTempo")
+            // visibilityOn("playTimer")
+            // visibilityOn("increaseButton")
+            // visibilityOn("decreaseButton")
+            // isClassOn("decreaseButton")
+            // isClassOn("increaseButton")
+            // isClassOn("resetButton")
+            // isClassOn("playChronometer")
+            // visibilityOff("playChronometer")
+
             let clearCounter = document.getElementById("vueltasMarcadas")
             clearCounter.innerHTML = `
             <div id="vueltasMarcadas" >

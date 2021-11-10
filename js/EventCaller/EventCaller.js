@@ -14,9 +14,12 @@ export function eventCaller() {
     let buttonIdReset = document.getElementById("resetButton")
     buttonIdReset.addEventListener("click", resetNumber)
 
+    let buttonIdResetTempo = document.getElementById("resetTempo")
+    buttonIdResetTempo.addEventListener("click", resetNumber)
+
     digitalClock("#playChronometer","#stopChronometer", "#resetButton", "#countChronometer", "#EraseCounterChronometer")
 
-    Timer("#playTimer","#stopChronometer", "#resetButton" )
+    Timer("#playTimer","#stopChronometer", "#resetButton", "#resetTempo" )
 }
 
 
