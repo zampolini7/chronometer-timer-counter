@@ -16,12 +16,38 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+
+.container-div-mode{
+    display: flex;
+    flex-direction: row;
+    /* margin: 20px; */
+    justify-content: flex-start;
+    padding: 20px;
+    align-self: center;
+    align-items: center;
+    vertical-align:auto;
+  
+}
+
+/* .input-radio-button{
+  vertical-align: bottom; 
+} */
+.div-mode-span{
+    font-size: 35px;
+    margin: 10px;
+}
+.div-radio-button{
+    margin: 10px;
+    font-size: 25px;
+    align-items: center;
+    align-self: center;
 }
 
 .container-span-button{
@@ -48,6 +74,15 @@
 .span-cyt.text{
     margin: 0px 20px;
 }
+.span-cyt.text.on{
+    display: flex;
+}
+
+.span-cyt.text.off{
+    display: none;
+}
+
+
 .span-text-container{
     display: flex;
     flex-direction: row;
@@ -55,6 +90,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 15px;
+    margin-right: -18px;
 }
 
 .span-button-container{
@@ -64,6 +100,28 @@
     align-items: center;
     margin: 0 15px;
 }
+
+.span-cyt.text.off.n{
+    margin: 20px auto;
+    margin-right: 0px;
+}
+
+.span-cyt.text.on.n{
+    margin: 20px auto;
+    margin-right: 30px;
+}
+.span-bastics{
+    font-size: 50px;
+}
+
+.span-bastics.on{
+    display: inherit;
+}
+
+.span-bastics.off{
+    display: none;
+}
+
 
 .button {
     
@@ -149,7 +207,7 @@
 
 .button.reset.tempo.on{
     display: flex;
-    /* background-color: */
+    background-color: #388e3c;
     width: 180px;
     height: 40px;
     margin: o auto;

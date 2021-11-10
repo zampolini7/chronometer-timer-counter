@@ -10,12 +10,28 @@
 <body class="body">
     <!-- <img class="image-body" src="/img/space-galaxy-background.jpg" alt="Space image"> -->
     <div class="container-all">
+        <div class="container-div-mode">
+            <span class="div-mode-span">Modos : </span>
+            <div class="div-radio-button">
+                <span class="span-radio-button">Tiempo </span>
+                <input id="timeCounter" class="input-radio-button" type="radio" name="color" value="azul" checked>  
+            </div>
+            <div class="div-radio-button">
+                <span class="span-radio-button">Contador </span>
+                <input id="regularCounter" class="input-radio-button" type="radio" name="color" value="azul">  
+            </div>
+            
+        </div>
         <div class="container-span-button">
+            
             <span class="span-cyt"> Counter and Timer</span>
             <div class="span-text-container ">
-                <span id="spanText-hours" class="span-cyt text"> 0 </span>
+                <span id="spanText-hours" class="span-cyt text">  0 </span>
                 <span id="spanText-minutes" class="span-cyt text"> 0 </span>
+                <span id="spanBasticSimple" class="span-bastics on" > '</span>
                 <span id="spanText" class="span-cyt text"> 0 </span>
+                <span id="spanBasticDoble" class="span-bastics on">''</span>
+                <span id="spanRegularCounter" class="span-cyt text off n"> 0 </span>
 
             </div>
             
@@ -31,6 +47,9 @@
             <button id="resetButton" class="button reset">Reset</button>
             <button id="resetTempo" class="button reset tempo off">Temporrizador OK</button>
             <button id="increaseButton" class="button increase">Increase</button>
+            <button id="decreaseButton1" class="button decrease visibilityOff">Decrease</button>
+            <button id="resetButton1" class="button reset visibilityOff">Reset</button>
+            <button id="increaseButton1" class="button increase visibilityOff">Increase</button>
         </div>
         <div id="vueltasMarcadas" >
             <div class="container-h3-button-vueltasMarcadas"> 

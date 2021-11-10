@@ -6,8 +6,10 @@ const increaseNumber = (e, increaseNumber) => {
     let valueOfTextInt = parseInt(valueOfText.textContent)
     let valueOfTextMinutes = document.getElementById("spanText-minutes")
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
-    let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1
+    let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1;
     
+
+
     console.log(valueOfMinutes)
     console.log(valueOfTextInt)
     console.log(valueModifiedOfText);
@@ -44,6 +46,8 @@ function decreaseNumber(e) {
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
     let valueModifiedOfText= valueOfText.innerText = valueOfTextInt - 1;
     
+
+
     if (valueModifiedOfText === 0 && valueOfMinutes > 0) {
         valueOfTextInt = 60
         valueOfText.innerHTML = valueOfTextInt
@@ -56,15 +60,7 @@ function decreaseNumber(e) {
         isClassof("playTimer")
     } 
 
-    // if (condition) {
-        
-    // }
-    // else if (valueModifiedOfText === 0) {
-    //     valueOfTextInt = 60
-    //     valueOfText.innerHTML = valueOfTextInt
-    //     valueOfTextMinutes.innerHTML = valueOfMinutes - 1
-    //     // increaseNumber()
-    // }
+    
 
     
 }
@@ -78,6 +74,8 @@ const resetNumber = (e) => {
     let valueModifiedOfTextSeconds = valueOfTextSeconds.innerText = 0;
     let valueOfTextMinutes= document.getElementById("spanText-minutes")
     let valueModifiedOfText= valueOfTextMinutes.innerHTML = 0
+
+   
     
     if (valueModifiedOfText === 0 && valueModifiedOfTextSeconds === 0) {
         isClassof("playChronometer")

@@ -248,13 +248,51 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
 
 }
 
+let showMeCounter = () => {
+    isClassof("spanText-hours")
+    isClassof("spanText-minutes")
+    isClassof("spanText")
+    isClassOn("spanRegularCounter")
+    isClassof("playChronometer")
+    isClassof("playTimer")
+    isClassof("spanBasticSimple")
+    isClassof("spanBasticDoble")
+    visibilityOff("playTimer")
+    visibilityOff("playChronometer")
+    visibilityOff("decreaseButton")
+    visibilityOff("resetButton")
+    visibilityOff("increaseButton")
+    visibilityOn("decreaseButton1")
+    visibilityOn("resetButton1")
+    visibilityOn("increaseButton1")
+}
+
+let showMeTime = () => {
+    isClassOn("spanText-hours")
+    isClassOn("spanText-minutes")
+    isClassOn("spanText")
+    isClassof("spanRegularCounter")
+    isClassOn("spanBasticSimple")
+    isClassOn("spanBasticDoble")
+
+
+    visibilityOn("playTimer")
+    visibilityOn("playChronometer")
+
+    visibilityOff("decreaseButton1")
+    visibilityOff("resetButton1")
+    visibilityOff("increaseButton1")
+    visibilityOn("decreaseButton")
+    visibilityOn("resetButton")
+    visibilityOn("increaseButton")
+}
 
 
 
 
 
 
-export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff }
+export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff, showMeCounter, showMeTime }
 
 
 
