@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Counter</title>
+</head>
+<body class="body">
+    <!-- <img class="image-body" src="/img/space-galaxy-background.jpg" alt="Space image"> -->
+    <div class="container-all">
+        <div class="container-span-button">
+            <span class="span-cyt"> Counter and Timer</span>
+            <div class="span-text-container ">
+                <span id="spanText-hours" class="span-cyt text"> 0 </span>
+                <span id="spanText-minutes" class="span-cyt text"> 0 </span>
+                <span id="spanText" class="span-cyt text"> 0 </span>
+
+            </div>
+            
+            <div class="span-button-container ">
+                <button id="playTimer" class="button cyt play off"> Timer</button>
+                <button id="playChronometer" class="button cyt play off"> Play</button>
+                <button id="stopChronometer" class="button cyt stop off"> Pause </button>
+                <button id="countChronometer" class="button cyt count off"> Marcar vueltas </button>
+            </div>
+        </div>
+        <div class="container-buttons"> 
+            <button id="decreaseButton" class="button decrease">Decrease</button>
+            <button id="resetButton" class="button reset">Reset</button>
+            <button id="increaseButton" class="button increase">Increase</button>
+        </div>
+        <div id="vueltasMarcadas" >
+            <div class="container-h3-button-vueltasMarcadas"> 
+                <h3 id="span-vueltasMarcadas"></h3>
+                <button id="EraseCounterChronometer" class="button cyt count off"> Borrar vueltas </button>
+            </div>
+            <div class="container-ul-vueltasMarcadas">
+                <ol id="ul-vueltasMarcadas">
+                    
+                </ol>
+                <ol id="ul-vueltasMarcadas-diferencia">
+                    
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="/js/main.js" type="module"></script>
+    <!-- <script src="/js/functions.js" type="module"></script>
+    <script src="/js/decreaseNumber.js"  type="module"></script>
+    <script src="/js/decreaseNumber.js" type="module"></script> -->
+    <!-- <script src="app.js"></script>
+    <script src="prueba.js"></script> -->
+</body>
+</html>

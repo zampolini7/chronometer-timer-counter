@@ -1,0 +1,163 @@
+.body{
+    background-color: #fbc02d;
+    color: rgb(253, 247, 247);
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.image-body{
+    position: absolute;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+}
+.container-all{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.container-span-button{
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    width: 60vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.span-cyt{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.span-cyt.text{
+    margin: 0px 20px;
+}
+.span-text-container{
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.span-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+}
+
+.button {
+    
+    height: 40px;
+    width: 100px;
+    margin: 10px;
+    background-color: #424242;
+    color: white;
+    border: 1.5px solid rgb(114, 113, 113);
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 18px;
+    padding: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0px 3px 10px rgba(100, 100, 100, 0.205);
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.button :hover{
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.35);
+    transition: 0.5s;
+}
+
+.button.cyt.play.off{
+    cursor: not-allowed;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.button.cyt.play.visibilityOff{
+    display: none;
+}
+.button.cyt.play.visibilityOn{
+    display: flex;
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.button.cyt.play.on{
+    display: flex;
+    background-color: #388e3c;
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.button.cyt.stop.off{
+    display: none;
+}
+
+.button.cyt.stop.on{
+    display: flex;
+    background-color: #e53935;
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.button.cyt.count.off{
+    display: none;
+}
+
+.button.cyt.count.on{
+    display: flex;
+    background-color: #141411;
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.container-ul-vueltasMarcadas{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-h3-button-vueltasMarcadas{
+    display: flex;
+    flex-direction: row;
+}
+
+.button.decrease.visibilityOff, button.increase.visibilityOff{
+    display: none;
+}
+.button.decrease.visibilityOn, button.increase.visibilityOn{
+    /* display: flex; */
+    margin: o auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* flex-direction: row; */
+}
