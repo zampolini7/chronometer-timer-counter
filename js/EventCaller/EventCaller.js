@@ -2,7 +2,9 @@ import { increaseNumber, decreaseNumber , resetNumber } from "../counter/counter
 import { increaseNumberCounter, decreaseNumberCounter , resetNumberCounter } from "../counter/counter2.js";
 import { digitalClock } from "../chronometer/chronometer.js";
 import { Timer } from "../timer/timer.js";
-import { showMeCounter, showMeTime } from "../functions/functions.js";
+import { showMeCounter, showMeTime, convertTextColor, convertTextInInput } from "../functions/functions.js";
+import { increaseNumberDecimal, decreaseNumberDecimal , resetNumberDecimal } from "../counter/counterChronometer.js";
+
 
 
 export function eventCaller() {
@@ -14,7 +16,7 @@ export function eventCaller() {
 
 
     let buttonIdReset = document.getElementById("resetButton")
-    buttonIdReset.addEventListener("click", resetNumber)
+    buttonIdReset.addEventListener("click", resetNumberDecimal)
 
     let buttonIdIncrease1 = document.getElementById("increaseButton1")
     buttonIdIncrease1.addEventListener("click", increaseNumberCounter)
@@ -35,6 +37,22 @@ export function eventCaller() {
 
     let buttonRadioButtonTime = document.getElementById("timeCounter")
     buttonRadioButtonTime.addEventListener("click", showMeTime)
+
+    let mouseOverSeconds = document.getElementById("spanText")
+    mouseOverSeconds.addEventListener("click", convertTextInInput )
+
+
+
+
+    mouseOverSeconds.addEventListener("mouseover", convertTextColor )
+
+    let mouseOverMinutes = document.getElementById("spanText-minutes")
+    mouseOverMinutes.addEventListener("mouseover", convertTextColor )
+    mouseOverMinutes.addEventListener("click", convertTextInInput )
+
+    let mouseOverOurs = document.getElementById("spanText-centecimal")
+    mouseOverOurs.addEventListener("mouseover", convertTextColor )
+    mouseOverOurs.addEventListener("click", convertTextInInput )
 
     digitalClock("#playChronometer","#stopChronometer", "#resetButton", "#countChronometer", "#EraseCounterChronometer")
 

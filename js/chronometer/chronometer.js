@@ -1,5 +1,8 @@
 import { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff } from "../functions/functions.js";
 import { increaseNumber } from "../counter/counter.js";
+import { showMeCounter, showMeTime, convertTextColor, convertTextInInput } from "../functions/functions.js";
+
+import { increaseNumberDecimal, decreaseNumberDecimal , resetNumberDecimal } from "../counter/counterChronometer.js";
 
 
 export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
@@ -9,13 +12,25 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
         
         if(e.target.matches(btnPlay)) {
             chronometer = setInterval(() => {
-                increaseNumber()
+                increaseNumberDecimal()
+
                 isClassOn("stopChronometer")
                 isClassof("playChronometer")
                 isClassOn("countChronometer")
                 isClassof("playTimer")
                 visibilityOff("playChronometer")
-            }, 100);  
+
+                
+                let mouseOverOurs = document.getElementById("spanText-centecimal")
+                let mouseOverSeconds = document.getElementById("spanText")
+                let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+                mouseOverSeconds.removeEventListener("click", convertTextInInput, false )
+                mouseOverMinutes.removeEventListener("click", convertTextInInput, false )
+                mouseOverOurs.removeEventListener("click", convertTextInInput, false )
+
+                
+            }, 10.5);  
             
         }
 
@@ -26,6 +41,14 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
             isClassOn("playChronometer")
             isClassof("stopChronometer")
             isClassOn("playTimer")
+
+            let mouseOverOurs = document.getElementById("spanText-centecimal")
+            let mouseOverSeconds = document.getElementById("spanText")
+            let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+            mouseOverSeconds.addEventListener("click", convertTextInInput )
+            mouseOverMinutes.addEventListener("click", convertTextInInput )
+            mouseOverOurs.addEventListener("click", convertTextInInput )
             
         }
 
@@ -52,6 +75,14 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
                 </ol>
             </div>
             `
+
+            let mouseOverOurs = document.getElementById("spanText-centecimal")
+            let mouseOverSeconds = document.getElementById("spanText")
+            let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+            mouseOverSeconds.addEventListener("click", convertTextInInput )
+            mouseOverMinutes.addEventListener("click", convertTextInInput )
+            mouseOverOurs.addEventListener("click", convertTextInInput )
         }
 
         if(e.target.matches(count)) {

@@ -1,5 +1,7 @@
 import { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOff, visibilityOn } from "../functions/functions.js";
 import { decreaseNumber, increaseNumber } from "../counter/counter.js";
+import { increaseNumberDecimal, decreaseNumberDecimal , resetNumberDecimal } from "../counter/counterChronometer.js";
+import { showMeCounter, showMeTime, convertTextColor, convertTextInInput } from "../functions/functions.js";
 
 
 export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
@@ -10,7 +12,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
         
         if(e.target.matches(btnPlay)) {
             chronometer = setInterval(() => {
-                decreaseNumber()
+                decreaseNumberDecimal()
                 isClassOn("stopChronometer")
                 isClassof("playChronometer")
                 isClassof("countChronometer")
@@ -20,7 +22,15 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 // visibilityOff("countChronometer")
                 stopCounter()
 
-            }, 100);  
+                let mouseOverOurs = document.getElementById("spanText-centecimal")
+                let mouseOverSeconds = document.getElementById("spanText")
+                let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+                mouseOverSeconds.removeEventListener("click", convertTextInInput, false )
+                mouseOverMinutes.removeEventListener("click", convertTextInInput, false )
+                mouseOverOurs.removeEventListener("click", convertTextInInput, false )
+
+            }, 10.5);  
             
             
             function stopCounter(e) {
@@ -31,11 +41,21 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 let valueOfTextMinutes = document.getElementById("spanText-minutes")
                 let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
 
+                let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
+                let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
+
+            
+    
+                valueOfTextCentecimal.addEventListener("click", convertTextInInput )
+                valueOfText.addEventListener("click", convertTextInInput )
+                valueOfTextMinutes.addEventListener("click", convertTextInInput )
+                
+
                 console.log(valueOfTextInt);
                 // visibilityOn("playChronometer")
                
             
-                if (valueOfTextInt === 0 && valueOfMinutes === 0) {
+                if (valueOfTextInt === 0 && valueOfMinutes === 0 && valueOfCentecimal === 0) {
                     clearInterval(chronometer)
                     // isClassOn("playChronometer")
                     isClassof("stopChronometer")
@@ -138,6 +158,14 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 </ol>
             </div>
             `
+
+            let mouseOverOurs = document.getElementById("spanText-centecimal")
+            let mouseOverSeconds = document.getElementById("spanText")
+            let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+            mouseOverSeconds.addEventListener("click", convertTextInInput )
+            mouseOverMinutes.addEventListener("click", convertTextInInput )
+            mouseOverOurs.addEventListener("click", convertTextInInput )
         }
         if(e.target.matches(resetTempo)) {
             clearInterval(chronometer)
@@ -186,6 +214,14 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 </ol>
             </div>
             `
+
+            let mouseOverOurs = document.getElementById("spanText-centecimal")
+            let mouseOverSeconds = document.getElementById("spanText")
+            let mouseOverMinutes = document.getElementById("spanText-minutes")
+
+            mouseOverSeconds.addEventListener("click", convertTextInInput )
+            mouseOverMinutes.addEventListener("click", convertTextInInput )
+            mouseOverOurs.addEventListener("click", convertTextInInput )
         }
 
         if(e.target.matches(count)) {

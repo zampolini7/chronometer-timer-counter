@@ -249,7 +249,7 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
 }
 
 let showMeCounter = () => {
-    isClassof("spanText-hours")
+    isClassof("spanText-centecimal")
     isClassof("spanText-minutes")
     isClassof("spanText")
     isClassOn("spanRegularCounter")
@@ -268,7 +268,7 @@ let showMeCounter = () => {
 }
 
 let showMeTime = () => {
-    isClassOn("spanText-hours")
+    isClassOn("spanText-centecimal")
     isClassOn("spanText-minutes")
     isClassOn("spanText")
     isClassof("spanRegularCounter")
@@ -287,12 +287,156 @@ let showMeTime = () => {
     visibilityOn("increaseButton")
 }
 
+let convertTextColor = (event) => {
+
+    console.log("llegamos al mouse over");
+    event.target.style.color = "#424242";
+
+    setTimeout(function() {
+    event.target.style.color = "";
+    }, 500);
+}
+
+
+let convertTextInInput = (e) => {
+    let getTextOfDom = document.getElementById(e.target.id)
+    let textOfDom = getTextOfDom.textContent = e.target.value
+
+    // textOfDom.setAttribute("class", "off")
+    console.log(e.target.id);
+
+    let createInputElement = document.createElement("input")
+    createInputElement.setAttribute("type", "number")
+    // createInputElement.classList.add("required" )
+    // createInputElement.setAttribute("required", "" )
+
+    
+    // createInputElement.setAttribute("min", "1")
+    // createInputElement.setAttribute("max", "60")
+    // createInputElement.setAttribute("minlength", "1")
 
 
 
+    // createInputElement.setAttribute("id", "seconds-Id")
+    switch(getTextOfDom.id) {
+        case 'spanText':
+            createInputElement.setAttribute("id", "seconds-Id")
+          break;
+        case 'spanText-minutes':
+            createInputElement.setAttribute("id", "minutes-Id")
+          break;
+        case 'spanText-centecimal':
+            createInputElement.setAttribute("id", "centecimal-Id")
+          break;
+      }
+
+    createInputElement.value= 0;
+    console.log(createInputElement.value);
+ 
+    createInputElement.setAttribute("class", "span-cyt-input")
+    getTextOfDom.appendChild(createInputElement)
+    console.log( getTextOfDom);
+    getTextOfDom.removeEventListener("click", convertTextInInput, false )
+    getTextOfDom.addEventListener("change", createNewTextAfterInput)
+    
+    
+
+}
+
+let createNewTextAfterInput = (e) =>{
+    
+    let getTextOfDomValueInput = document.getElementById(e.target.id)
+    console.log(getTextOfDomValueInput.id);
+    let newValueOfTarget = e.target.value;
+    let getTextOfDom;
+    switch(getTextOfDomValueInput.id) {
+        case 'seconds-Id':
+            getTextOfDom = document.getElementById("spanText")  
+          break;
+        case 'minutes-Id':
+             getTextOfDom = document.getElementById("spanText-minutes")
+          break;
+        case 'centecimal-Id':
+            getTextOfDom = document.getElementById("spanText-centecimal")
+          break;
+      }
 
 
-export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff, showMeCounter, showMeTime }
+    // console.log(getTextOfDom);
+      if (newValueOfTarget.length === 0) {
+        getTextOfDom.textContent = 0;
+        
+        let mouseOverSeconds = document.getElementById("spanText")
+        let valueOfSeconds = mouseOverSeconds.textContent
+        mouseOverSeconds.addEventListener("click", convertTextInInput )
+        
+        let mouseOverMinutes = document.getElementById("spanText-minutes")
+        let valueOfMinutes = mouseOverMinutes.textContent
+        mouseOverMinutes.addEventListener("click", convertTextInInput )
+
+        let mouseOverOurs = document.getElementById("spanText-centecimal")
+        let valueOfOurs = mouseOverOurs.textContent
+        mouseOverOurs.addEventListener("click", convertTextInInput )
+
+        if ( valueOfSeconds == 0 && valueOfMinutes == 0 && valueOfOurs == 0) {
+            isClassof("playChronometer")
+            isClassof("playTimer") 
+            // visibilityOn("playTimer")
+            visibilityOn("playChronometer")
+            isClassof("countChronometer")
+            // visibilityOff("spanRegularCounter")
+
+
+        }
+
+
+
+        return getTextOfDom;
+    } else {
+
+
+        let newValueOfDomByPrompt = getTextOfDom.textContent = newValueOfTarget;
+        isClassOn("playChronometer")
+        isClassOn("playTimer")
+        console.log(newValueOfDomByPrompt);
+        // if (getTextOfDomValueInput.textContent === " "|| getTextOfDom.textContent === " ") {
+        //     getTextOfDom.textContent = 0;        
+        // }
+        
+        // let newValueOfText =parseInt(getTextOfDomValueInput.textContent);
+        // let textOfDom = getTextOfDom.textContent = getTextOfDomValueInput.value;
+        // console.log(typeof newValueOfText);
+        // console.log( newValueOfText);
+        
+        
+        // getTextOfDomValueInput.addEventListener("click", convertTextInInput)
+        // mouseOverSeconds = getTextOfDomValueInput.value;
+    
+        let mouseOverSeconds = document.getElementById("spanText")
+    
+        mouseOverSeconds.addEventListener("click", convertTextInInput )
+        
+        let mouseOverMinutes = document.getElementById("spanText-minutes")
+          
+        mouseOverMinutes.addEventListener("click", convertTextInInput )
+    
+        let mouseOverOurs = document.getElementById("spanText-centecimal")
+    
+        mouseOverOurs.addEventListener("click", convertTextInInput )
+    
+        // let newValueOfText =getTextOfDom.textContent;
+        // console.log(newValueOfText);
+    }
+
+
+    return getTextOfDom
+}
+
+// 
+
+
+
+export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff, showMeCounter, showMeTime, convertTextColor, convertTextInInput}
 
 
 
@@ -312,5 +456,122 @@ export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibi
 //     span2.appendChild(spanText2)
 //     console.log(resultadoRestaDeTiemposSec);
         
+
+// }
+
+// Esto si funciona pero lo pongo acá dee backup
+
+// let convertTextInInput = (event) => {
+//     let getTextOfDom = document.getElementById("spanText")
+//     let textOfDom = getTextOfDom.textContent = ""
+
+//     let createInputElement = document.createElement("input")
+//     createInputElement.setAttribute("type", "text")
+//     createInputElement.setAttribute("id", "seconds-Id")
+//     // Node.removeChild(getTextOfDom)
+//     createInputElement.setAttribute("class", "span-cyt-input")
+//     getTextOfDom.appendChild(createInputElement)
+//     console.log(createInputElement);
+//     getTextOfDom.removeEventListener("click", convertTextInInput, false )
+//     // getTextOfDom.removeEventListener("click", convertTextInInput, true )
+//     getTextOfDom.addEventListener("change", createNewTextAfterInput)
+//     let newValueOfText =getTextOfDom.textContent;
+//     console.log(newValueOfText);
+
+// }
+
+// let createNewTextAfterInput = (e) =>{
+//     let getTextOfDomValueInput = document.getElementById("seconds-Id")
+//     let getTextOfDom = document.getElementById("spanText")
+//     getTextOfDom.textContent = e.target.value;
+//     let newValueOfText =getTextOfDomValueInput.textContent;
+//     console.log(newValueOfText);
+//     getTextOfDom.addEventListener("click", convertTextInInput)
+
+// }
+
+// let getTextOfDomValueInput; 
+// switch(getTextOfDomValueInput) {
+//     case 'spanText':
+//         document.getElementById("seconds-Id")
+//       break;
+//     case 'spanText-minutes':
+//         document.getElementById("minutes-Id")
+//       break;
+//     case 'spanText-hours':
+//         document.getElementById("hours-Id")
+//       break;
+//   }
+
+// eL BACKUP
+// let convertTextInInput = (e) => {
+//     let getTextOfDom = document.getElementById(e.target.id)
+//     let textOfDom = getTextOfDom.textContent = 0
+
+//     // textOfDom.setAttribute("class", "off")
+//     console.log(e.target.id);
+
+//     let createInputElement = document.createElement("input")
+//     createInputElement.setAttribute("type", "number")
+//     createInputElement.setAttribute("id", "seconds-Id")
+//     switch(getTextOfDom) {
+//         case 'spanText':
+//             createInputElement.setAttribute("id", "seconds-Id")
+//           break;
+//         case 'spanText-minutes':
+//             createInputElement.setAttribute("id", "minutes-Id")
+//           break;
+//         case 'spanText-hours':
+//             createInputElement.setAttribute("id", "hours-Id")
+//           break;
+//       }
+//     createInputElement.value= 0;
+//     console.log(createInputElement.value);
+//     // if (createInputElement.value= 0) {
+//     //     textOfDom = getTextOfDom.textContent = 0
+//     // }
+    
+//     // Node.removeChild(getTextOfDom)
+//     createInputElement.setAttribute("class", "span-cyt-input")
+//     getTextOfDom.appendChild(createInputElement)
+//     console.log( getTextOfDom);
+//     getTextOfDom.removeEventListener("click", convertTextInInput, false )
+//     // getTextOfDom.removeEventListener("click", convertTextInInput, true )
+//     getTextOfDom.addEventListener("change", createNewTextAfterInput)
+    
+//     let newValueOfText =getTextOfDom.textContent;
+//     console.log(newValueOfText);
+
+// }
+
+// let createNewTextAfterInput = (e) =>{
+    
+//     let getTextOfDomValueInput = document.getElementById(e.target.id)
+    
+//     let getTextOfDom = document.getElementById(e.target.id)
+    
+//     // getTextOfDom.textContent = e.target.value;
+//     // if (getTextOfDomValueInput.textContent === " "|| getTextOfDom.textContent === " ") {
+//     //     getTextOfDom.textContent = 0;        
+//     // }
+    
+//     let newValueOfText =parseInt(getTextOfDomValueInput.textContent);
+//     let textOfDom = getTextOfDom.textContent = getTextOfDomValueInput.value;
+//     console.log(typeof newValueOfText);
+//     console.log( newValueOfText);
+    
+    
+//     // getTextOfDomValueInput.addEventListener("click", convertTextInInput)
+//     let mouseOverSeconds = document.getElementById("spanText")
+//     // mouseOverSeconds = getTextOfDomValueInput.value;
+//     mouseOverSeconds.addEventListener("click", convertTextInInput )
+
+//     let mouseOverMinutes = document.getElementById("spanText-minutes")
+    
+//     mouseOverMinutes.addEventListener("click", convertTextInInput )
+
+//     let mouseOverOurs = document.getElementById("spanText-hours")
+
+//     mouseOverOurs.addEventListener("click", convertTextInInput )
 
 // }

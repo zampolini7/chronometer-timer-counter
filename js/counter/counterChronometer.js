@@ -1,43 +1,51 @@
 import { getElementByIdFunc, isClassOn, isClassof } from "../functions/functions.js";
 
 // Inicio Incrementar número del dom
-const increaseNumber = (e, increaseNumber) => {
+const increaseNumberDecimal = (e, increaseNumber) => {
     let valueOfText = document.getElementById("spanText")
     let valueOfTextInt = parseInt(valueOfText.textContent)
-    let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1;
+    // let valueModifiedOfText = valueOfTextInt + 1;
 
+    // valueOfText.innerText = valueModifiedOfText;
+    
     let valueOfTextMinutes = document.getElementById("spanText-minutes")
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
     
     
-    let valueOfTextCentecimal = document.getElementById("spanText-minutes")
+    let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
     let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
-    // let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1;
+    valueOfTextCentecimal.innerHTML = valueOfCentecimal + 1;
+    // let valueModifiedOfTextCentecimal = valueOfTextCentecimal.innerText = valueOfCentecimal + 1;
 
     console.log(valueOfMinutes)
     console.log(valueOfTextInt)
-    console.log(valueModifiedOfText);
+    // console.log(valueModifiedOfText);
 
-    if (valueModifiedOfText > 0 || valueOfTextInt > 0) {
+    if (valueOfMinutes > 0 || valueOfTextInt > 0 || valueOfCentecimal > 0 ) {
         isClassOn("playChronometer")
         isClassOn("playTimer")
         
-    } else if (valueModifiedOfText === 0 ) {
+    } else if (valueOfCentecimal === 0 ) {
         isClassof("playChronometer")
         isClassof("playTimer")
        
     } ;
+
+    if (valueOfCentecimal >= 99) {
+
+        valueOfText.innerText = valueOfTextInt + 1;
+        valueOfTextCentecimal.innerHTML = 0;
+        console.log("aca si entro");
+
+    }
     
-    if (valueModifiedOfText >= 60) {
+    if (valueOfTextInt >= 60) {
         valueOfTextInt = 0
         valueOfText.innerHTML = valueOfTextInt
         valueOfTextMinutes.innerHTML = valueOfMinutes + 1
         // increaseNumber()
     }
 
-    if (valueOfCentecimal > 99) {
-        valueOfText.innerText = valueOfTextInt + 1;
-    }
 
 
 
@@ -46,35 +54,46 @@ const increaseNumber = (e, increaseNumber) => {
 // Fin Incrementar número del dom
 
 // Inicio Decrementar número del dom 
-function decreaseNumber(e) {
+function decreaseNumberDecimal(e) {
     
     let valueOfText = document.getElementById("spanText");
     let valueOfTextInt = parseInt(valueOfText.textContent);
+
     let valueOfTextMinutes = document.getElementById("spanText-minutes")
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
-    let valueModifiedOfText= valueOfText.innerText = valueOfTextInt - 1;
     
+    
+    let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
+    let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
+    valueOfTextCentecimal.innerHTML = valueOfCentecimal - 1;
 
+   
 
-    if (valueModifiedOfText === 0 && valueOfMinutes > 0) {
+    if (valueOfMinutes >= 0 && valueOfTextInt === 0 && valueOfCentecimal === 0) {
         valueOfTextInt = 60
         valueOfText.innerHTML = valueOfTextInt
         valueOfTextMinutes.innerHTML = valueOfMinutes - 1
         // increaseNumber()
     }
 
-    if (valueModifiedOfText <= 0 && valueOfMinutes === 0) {
+    if (valueOfTextInt <= 0 && valueOfMinutes === 0) {
         isClassof("playChronometer")
         isClassof("playTimer")
     } 
 
-    if (valueOfMinutes > 0 && valueOfTextInt === 0 ) {
-        valueOfTextInt = 60
-        valueOfText.innerHTML = valueOfTextInt
-        valueOfTextMinutes.innerHTML = valueOfMinutes - 1
-    } 
+    // if (valueOfMinutes >= 0 && valueOfTextInt === 0 ) {
+    //     valueOfTextInt = 60 
+    //     valueOfText.innerHTML = valueOfTextInt
+    //     valueOfTextMinutes.innerHTML = valueOfMinutes - 1
+    // } 
 
-    
+    if (valueOfCentecimal === 0 && valueOfTextInt > 0) {
+
+        valueOfText.innerText = valueOfTextInt -1;
+        valueOfTextCentecimal.innerHTML = 99;
+        console.log("aca si entro");
+
+    }
 
     
 }
@@ -82,16 +101,18 @@ function decreaseNumber(e) {
 // Fin Decrementar número del dom 
 
 // Inicio resetear contador
-const resetNumber = (e) => {
+const resetNumberDecimal = (e) => {
     console.log("tamo bien");
     let valueOfTextSeconds= document.getElementById("spanText")
     let valueModifiedOfTextSeconds = valueOfTextSeconds.innerText = 0;
     let valueOfTextMinutes= document.getElementById("spanText-minutes")
     let valueModifiedOfText= valueOfTextMinutes.innerHTML = 0
 
+    let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
+    valueOfTextCentecimal.innerHTML = 0
    
     
-    if (valueModifiedOfText === 0 && valueModifiedOfTextSeconds === 0) {
+    if (valueModifiedOfText === 0 && valueModifiedOfTextSeconds === 0 && valueOfTextCentecimal === 0 ) {
         isClassof("playChronometer")
     } 
   
@@ -99,4 +120,4 @@ const resetNumber = (e) => {
 
 // Inocop resetear contador
 
-export { increaseNumber, decreaseNumber , resetNumber }
+export { increaseNumberDecimal, decreaseNumberDecimal , resetNumberDecimal }
