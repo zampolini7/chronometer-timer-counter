@@ -25,7 +25,6 @@ const increaseNumber = (e, increaseNumber) => {
     } else if (valueModifiedOfText === 0 ) {
         isClassof("playChronometer")
         isClassof("playTimer")
-       
     } ;
     
     if (valueModifiedOfText >= 60) {

@@ -63,6 +63,9 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
             let valueOfTextMinutes = parseInt(textMinutes.textContent)
             console.log(valueOfTextMinutes);
 
+            let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
+            let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
+
            let li = d.createElement("li")
            li.setAttribute("class", "li-class")
            let span = d.createElement("span")
@@ -70,7 +73,7 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
            
            
 
-           let spanText = d.createTextNode(` ${valueOfTextMinutes} : ${ valueOfTextSeconds} ` )
+           let spanText = d.createTextNode(` ${valueOfTextMinutes}  : ${ valueOfTextSeconds} : ${valueOfCentecimal}` )
            let elementoVueltas = d.getElementById(id1)
 
            elementoVueltas.appendChild(li)
@@ -181,6 +184,11 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
                     let númber1SplitOfLastChild2 = parseInt(objectSplitLastChild[1])
                     console.log(númber1SplitOfLastChild2);
 
+                    let númber1SplitOfLastChild3 = parseInt(objectSplitLastChild[2])
+                    console.log(númber1SplitOfLastChild3);
+
+                    
+
                     
                 
 
@@ -189,60 +197,107 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
                     let span2 = d.createElement("span")
                     span2.setAttribute("class", "li-span-class")
 
-                    if (valueOfTextMinutes > 0) {
-                                           
-                      if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
-                        let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  valueOfTextMinutes) 
-                        let resultadoRestaDeTiemposSec = (( 60 + valueOfTextSeconds   ) - númber1SplitOfLastChild2) 
-                        console.log(resultadoRestaDeTiemposSec);
-    
-    
-                        let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } ` )
+                    
+                        let tiempoEnMinutosASegundosDelCronometro = (valueOfTextMinutes * 60)  
+                        let tiempoEnMinutosASegundosDelUltimoChild = (númber1SplitOfLastChild  * 60)
+                        let sumaDeSegundosTotalesCronometro = tiempoEnMinutosASegundosDelCronometro + valueOfTextSeconds
+                        let sumaDeSegundosTotalesChilds = tiempoEnMinutosASegundosDelUltimoChild  +  númber1SplitOfLastChild2
+
+                        let resultadoDeTiempoEnSegundos = sumaDeSegundosTotalesCronometro - sumaDeSegundosTotalesChilds
+                        let minutosAStrinig = String(resultadoDeTiempoEnSegundos / 60)
+                        console.log( minutosAStrinig);
+                        let resultadoAMinutos = minutosAStrinig.split(".", 1)
+                        let segundosAString = String(resultadoDeTiempoEnSegundos % 60)
+                        let resultadosSegundos = segundosAString.split(".", 1)
+                        let resultadoRestaDeTiemposCent = valueOfCentecimal > númber1SplitOfLastChild3? (valueOfCentecimal - númber1SplitOfLastChild3):     (númber1SplitOfLastChild3 - valueOfCentecimal);
+                        //     console.log(resultadoRestaDeTiemposCent);
+
+                        let spanText2 = d.createTextNode(` Time diference- ${resultadoAMinutos}  : ${resultadosSegundos } : ${resultadoRestaDeTiemposCent}` )
                         let elementoVueltas2 = d.getElementById(id2)
     
     
                         elementoVueltas2.appendChild(li2)
                         li2.appendChild(span2)
                         span2.appendChild(spanText2)
-                        console.log(resultadoRestaDeTiemposSec);
+                        // console.log(resultadoRestaDeTiemposSec);
+        
                             
-                        } else {
 
-                            let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
-                            let resultadoRestaDeTiemposSec = (  valueOfTextSeconds - númber1SplitOfLastChild2) 
-        
-        
-                            let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } ` )
-                            let elementoVueltas2 = d.getElementById(id2)
-        
-                            console.log(resultadoRestaDeTiemposSec);
-                            elementoVueltas2.appendChild(li2)
-                            li2.appendChild(span2)
-                            span2.appendChild(spanText2)
+                    // if (valueOfTextMinutes > 0) {                       
+                    //   if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
+                        
+                    //     let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  valueOfTextMinutes) 
+                    //     let resultadoRestaDeTiemposSec = (valueOfTextSeconds > númber1SplitOfLastChild2) ? (( 60 +númber1SplitOfLastChild2 ) - valueOfTextSeconds): ( ( 60 + valueOfTextSeconds    ) - númber1SplitOfLastChild2) 
+                        
 
-                        }
+
+
+                    //     if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild > 0 || valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild  0 ) {
+                    //         resultadoRestaDeTiemposMin = númber1SplitOfLastChild > valueOfTextMinutes ? númber1SplitOfLastChild - valueOfTextMinutes : valueOfTextMinutes - númber1SplitOfLastChild; 
+                    //         resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? valueOfTextSeconds - númber1SplitOfLastChild2 :  númber1SplitOfLastChild2 - valueOfTextSeconds
+                            
+                            
+                    //     }
+                    
+                        
+                    //     let resultadoRestaDeTiemposCent = (99 - valueOfCentecimal ) > númber1SplitOfLastChild3?  ((99 - valueOfCentecimal ) - númber1SplitOfLastChild3): ( númber1SplitOfLastChild3 - (99 - valueOfCentecimal ) )
+                    //     console.log(resultadoRestaDeTiemposCent);
+    
+    
+                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //     let elementoVueltas2 = d.getElementById(id2)
+    
+    
+                    //     elementoVueltas2.appendChild(li2)
+                    //     li2.appendChild(span2)
+                    //     span2.appendChild(spanText2)
+                    //     console.log(resultadoRestaDeTiemposSec);
+                            
+                    //     } else {
+
+
+                    //         let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+                    //         let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+                    //         let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+
+                    //         console.log(resultadoRestaDeTiemposCent);
+        
+                    //         let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //         let elementoVueltas2 = d.getElementById(id2)
+        
+                    //         console.log(resultadoRestaDeTiemposSec);
+                    //         elementoVueltas2.appendChild(li2)
+                    //         li2.appendChild(span2)
+                    //         span2.appendChild(spanText2)
+
+                    //     }
 
                         
                     
-                        
-                    } else{
-                        let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
-                        let resultadoRestaDeTiemposSec = ( númber1SplitOfLastChild2 - valueOfTextSeconds) 
-    
-    
-                        let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } ` )
-                        let elementoVueltas2 = d.getElementById(id2)
-    
-    
-                        elementoVueltas2.appendChild(li2)
-                        li2.appendChild(span2)
-                        span2.appendChild(spanText2)
+                    // }    
+                    // } else{
+                    //     // let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
+                    //     // let resultadoRestaDeTiemposSec = ( númber1SplitOfLastChild2 - valueOfTextSeconds) 
+                    //     // let resultadoRestaDeTiemposCent = (valueOfCentecimal  - númber1SplitOfLastChild3)
+                    //     // console.log(resultadoRestaDeTiemposCent);
 
-                    }
+                    //     let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+                    //     let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+                    //     let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+    
+                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //     let elementoVueltas2 = d.getElementById(id2)
+    
+    
+                    //     elementoVueltas2.appendChild(li2)
+                    //     li2.appendChild(span2)
+                    //     span2.appendChild(spanText2)
+
+                    // }
                     
                    
 
-           }
+        }
 
            
 

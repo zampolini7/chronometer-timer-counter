@@ -80,21 +80,21 @@ function decreaseNumberDecimal(e) {
         isClassof("playChronometer")
         isClassof("playTimer")
     } 
-
-    // if (valueOfMinutes >= 0 && valueOfTextInt === 0 ) {
-    //     valueOfTextInt = 60 
-    //     valueOfText.innerHTML = valueOfTextInt
-    //     valueOfTextMinutes.innerHTML = valueOfMinutes - 1
-    // } 
-
+    
     if (valueOfCentecimal === 0 && valueOfTextInt > 0) {
-
+        
         valueOfText.innerText = valueOfTextInt -1;
         valueOfTextCentecimal.innerHTML = 99;
         console.log("aca si entro");
-
+        
     }
-
+    
+    
+        // if (valueOfMinutes >= 0 && valueOfTextInt === 0 ) {
+        //     valueOfTextInt = 60 
+        //     valueOfText.innerHTML = valueOfTextInt
+        //     valueOfTextMinutes.innerHTML = valueOfMinutes - 1
+        // } 
     
 }
 

@@ -56,3 +56,213 @@
 
 //                let númber1SplitOfLastLastChild2 = parseInt(objectSplitLastLastChild[1])
 //                console.log(númber1SplitOfLastChild2);
+
+
+// if (valueOfTextMinutes > 0) {
+                                           
+//     if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
+
+//       let resultadoRestaDeTiemposMin = númber1SplitOfLastChild > valueOfTextMinutes? (númber1SplitOfLastChild -  valueOfTextMinutes): ( valueOfTextMinutes -númber1SplitOfLastChild )
+
+//       // console.log(Math.sign(resultadoRestaDeTiemposMin));
+
+
+//       let resultadoRestaDeTiemposSec = (( 60 + valueOfTextSeconds   ) > númber1SplitOfLastChild2) ? (( 60 + valueOfTextSeconds   ) - númber1SplitOfLastChild2): ( númber1SplitOfLastChild2 -( 60 + valueOfTextSeconds   ) )
+      
+//       let resultadoRestaDeTiemposCent = (99 - valueOfCentecimal ) > númber1SplitOfLastChild3?  ((99 - valueOfCentecimal ) - númber1SplitOfLastChild3): ( númber1SplitOfLastChild3 - (99 - valueOfCentecimal ) )
+//       console.log(resultadoRestaDeTiemposCent);
+
+
+
+//       let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//       let elementoVueltas2 = d.getElementById(id2)
+
+
+//       elementoVueltas2.appendChild(li2)
+//       li2.appendChild(span2)
+//       span2.appendChild(spanText2)
+//       console.log(resultadoRestaDeTiemposSec);
+          
+//       } else {
+
+//           let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+//           let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+//           let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+//           console.log(resultadoRestaDeTiemposCent);
+          
+//           console.log(Math.sign(resultadoRestaDeTiemposMin));
+//           let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//           let elementoVueltas2 = d.getElementById(id2)
+
+//           console.log(resultadoRestaDeTiemposSec);
+//           elementoVueltas2.appendChild(li2)
+//           li2.appendChild(span2)
+//           span2.appendChild(spanText2)
+
+//       }
+
+      
+  
+      
+//   } else{
+//     let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+//     let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+//     let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+//       console.log(resultadoRestaDeTiemposCent);
+
+
+//       console.log(Math.sign(resultadoRestaDeTiemposMin));
+//       let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//       let elementoVueltas2 = d.getElementById(id2)
+
+
+//       elementoVueltas2.appendChild(li2)
+//       li2.appendChild(span2)
+//       span2.appendChild(spanText2)
+
+//   }
+
+
+
+
+
+
+
+//   if (valueOfTextMinutes > 0) {
+                                           
+//     if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
+      
+//       let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  valueOfTextMinutes) 
+//       let resultadoRestaDeTiemposSec = (( 60 + valueOfTextSeconds   ) - númber1SplitOfLastChild2) 
+
+//       if (resultadoRestaDeTiemposSec > 59 ) {
+//           resultadoRestaDeTiemposSec = resultadoRestaDeTiemposSec - 60;
+//           resultadoRestaDeTiemposMin = resultadoRestaDeTiemposMin + 1;
+          
+//       }
+      
+//       let resultadoRestaDeTiemposCent = ((99 - valueOfCentecimal ) - númber1SplitOfLastChild3)
+//       console.log(resultadoRestaDeTiemposCent);
+
+
+//       let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//       let elementoVueltas2 = d.getElementById(id2)
+
+
+//       elementoVueltas2.appendChild(li2)
+//       li2.appendChild(span2)
+//       span2.appendChild(spanText2)
+//       console.log(resultadoRestaDeTiemposSec);
+          
+//       } else {
+
+//           let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
+//           let resultadoRestaDeTiemposSec = (  valueOfTextSeconds - númber1SplitOfLastChild2) 
+//           let resultadoRestaDeTiemposCent = ( valueOfCentecimal  - númber1SplitOfLastChild3)
+//           console.log(resultadoRestaDeTiemposCent);
+
+//           let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//           let elementoVueltas2 = d.getElementById(id2)
+
+//           console.log(resultadoRestaDeTiemposSec);
+//           elementoVueltas2.appendChild(li2)
+//           li2.appendChild(span2)
+//           span2.appendChild(spanText2)
+
+//       }
+
+      
+  
+      
+//   } else{
+//       let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
+//       let resultadoRestaDeTiemposSec = ( númber1SplitOfLastChild2 - valueOfTextSeconds) 
+//       let resultadoRestaDeTiemposCent = (valueOfCentecimal  - númber1SplitOfLastChild3)
+//       console.log(resultadoRestaDeTiemposCent);
+
+//       let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+//       let elementoVueltas2 = d.getElementById(id2)
+
+
+//       elementoVueltas2.appendChild(li2)
+//       li2.appendChild(span2)
+//       span2.appendChild(spanText2)
+
+//   }
+  
+ 
+
+// }
+// if (valueOfTextMinutes > 0) {                       
+                    //   if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
+                        
+                    //     let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  valueOfTextMinutes) 
+                    //     let resultadoRestaDeTiemposSec = (valueOfTextSeconds > númber1SplitOfLastChild2) ? (( 60 +númber1SplitOfLastChild2 ) - valueOfTextSeconds): ( ( 60 + valueOfTextSeconds    ) - númber1SplitOfLastChild2) 
+                        
+
+
+
+                    //     if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild > 0 || valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild  0 ) {
+                    //         resultadoRestaDeTiemposMin = númber1SplitOfLastChild > valueOfTextMinutes ? númber1SplitOfLastChild - valueOfTextMinutes : valueOfTextMinutes - númber1SplitOfLastChild; 
+                    //         resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? valueOfTextSeconds - númber1SplitOfLastChild2 :  númber1SplitOfLastChild2 - valueOfTextSeconds
+                            
+                            
+                    //     }
+                    
+                        
+                    //     let resultadoRestaDeTiemposCent = (99 - valueOfCentecimal ) > númber1SplitOfLastChild3?  ((99 - valueOfCentecimal ) - númber1SplitOfLastChild3): ( númber1SplitOfLastChild3 - (99 - valueOfCentecimal ) )
+                    //     console.log(resultadoRestaDeTiemposCent);
+    
+    
+                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //     let elementoVueltas2 = d.getElementById(id2)
+    
+    
+                    //     elementoVueltas2.appendChild(li2)
+                    //     li2.appendChild(span2)
+                    //     span2.appendChild(spanText2)
+                    //     console.log(resultadoRestaDeTiemposSec);
+                            
+                    //     } else {
+
+
+                    //         let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+                    //         let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+                    //         let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+
+                    //         console.log(resultadoRestaDeTiemposCent);
+        
+                    //         let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //         let elementoVueltas2 = d.getElementById(id2)
+        
+                    //         console.log(resultadoRestaDeTiemposSec);
+                    //         elementoVueltas2.appendChild(li2)
+                    //         li2.appendChild(span2)
+                    //         span2.appendChild(spanText2)
+
+                    //     }
+
+                        
+                    
+                    // }    
+                    // } else{
+                    //     // let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
+                    //     // let resultadoRestaDeTiemposSec = ( númber1SplitOfLastChild2 - valueOfTextSeconds) 
+                    //     // let resultadoRestaDeTiemposCent = (valueOfCentecimal  - númber1SplitOfLastChild3)
+                    //     // console.log(resultadoRestaDeTiemposCent);
+
+                    //     let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
+                    //     let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
+                    //     let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
+    
+                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
+                    //     let elementoVueltas2 = d.getElementById(id2)
+    
+    
+                    //     elementoVueltas2.appendChild(li2)
+                    //     li2.appendChild(span2)
+                    //     span2.appendChild(spanText2)
+
+                    // }
+                    
+                   
