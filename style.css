@@ -36,9 +36,7 @@
   
 }
 
-/* .input-radio-button{
-  vertical-align: bottom; 
-} */
+
 .div-mode-span{
     font-size: 35px;
     margin: 10px;
@@ -75,18 +73,21 @@
     width: 60px;
     font-size: 50px;
     background-color: inherit;
-    border: none;
+    border: 0.5px solid bisque;
     color: inherit;
 }
 
 .span-cyt.text{
     margin: 0px 20px;
 }
-.span-cyt.text.on{
+.span-cyt.text.on {
     display: flex;
 }
+.input-radio-button.on{
+    display: inline;
+}
 
-.span-cyt.text.off{
+.span-cyt.text.off, .input-radio-button.off{
     display: none;
 }
 

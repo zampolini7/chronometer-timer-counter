@@ -223,80 +223,7 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
         
                             
 
-                    // if (valueOfTextMinutes > 0) {                       
-                    //   if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes )  {
-                        
-                    //     let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  valueOfTextMinutes) 
-                    //     let resultadoRestaDeTiemposSec = (valueOfTextSeconds > númber1SplitOfLastChild2) ? (( 60 +númber1SplitOfLastChild2 ) - valueOfTextSeconds): ( ( 60 + valueOfTextSeconds    ) - númber1SplitOfLastChild2) 
-                        
-
-
-
-                    //     if (valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild > 0 || valueOfTextMinutes > 0  && númber1SplitOfLastChild !== valueOfTextMinutes && númber1SplitOfLastChild  0 ) {
-                    //         resultadoRestaDeTiemposMin = númber1SplitOfLastChild > valueOfTextMinutes ? númber1SplitOfLastChild - valueOfTextMinutes : valueOfTextMinutes - númber1SplitOfLastChild; 
-                    //         resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? valueOfTextSeconds - númber1SplitOfLastChild2 :  númber1SplitOfLastChild2 - valueOfTextSeconds
-                            
-                            
-                    //     }
                     
-                        
-                    //     let resultadoRestaDeTiemposCent = (99 - valueOfCentecimal ) > númber1SplitOfLastChild3?  ((99 - valueOfCentecimal ) - númber1SplitOfLastChild3): ( númber1SplitOfLastChild3 - (99 - valueOfCentecimal ) )
-                    //     console.log(resultadoRestaDeTiemposCent);
-    
-    
-                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
-                    //     let elementoVueltas2 = d.getElementById(id2)
-    
-    
-                    //     elementoVueltas2.appendChild(li2)
-                    //     li2.appendChild(span2)
-                    //     span2.appendChild(spanText2)
-                    //     console.log(resultadoRestaDeTiemposSec);
-                            
-                    //     } else {
-
-
-                    //         let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
-                    //         let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
-                    //         let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
-
-                    //         console.log(resultadoRestaDeTiemposCent);
-        
-                    //         let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
-                    //         let elementoVueltas2 = d.getElementById(id2)
-        
-                    //         console.log(resultadoRestaDeTiemposSec);
-                    //         elementoVueltas2.appendChild(li2)
-                    //         li2.appendChild(span2)
-                    //         span2.appendChild(spanText2)
-
-                    //     }
-
-                        
-                    
-                    // }    
-                    // } else{
-                    //     // let resultadoRestaDeTiemposMin = (valueOfTextMinutes -  númber1SplitOfLastChild) 
-                    //     // let resultadoRestaDeTiemposSec = ( númber1SplitOfLastChild2 - valueOfTextSeconds) 
-                    //     // let resultadoRestaDeTiemposCent = (valueOfCentecimal  - númber1SplitOfLastChild3)
-                    //     // console.log(resultadoRestaDeTiemposCent);
-
-                    //     let resultadoRestaDeTiemposMin = valueOfTextMinutes >  númber1SplitOfLastChild ? (valueOfTextMinutes -  númber1SplitOfLastChild): (númber1SplitOfLastChild - valueOfTextMinutes ) ; 
-                    //     let resultadoRestaDeTiemposSec = valueOfTextSeconds > númber1SplitOfLastChild2 ? (valueOfTextSeconds - númber1SplitOfLastChild2) :(númber1SplitOfLastChild2 - valueOfTextSeconds )  
-                    //     let resultadoRestaDeTiemposCent = valueOfCentecimal  > númber1SplitOfLastChild3 ? (valueOfCentecimal  - númber1SplitOfLastChild3) : (númber1SplitOfLastChild3 - valueOfCentecimal )
-    
-                    //     let spanText2 = d.createTextNode(` Time diference- ${resultadoRestaDeTiemposMin}  : ${resultadoRestaDeTiemposSec } : ${resultadoRestaDeTiemposCent}` )
-                    //     let elementoVueltas2 = d.getElementById(id2)
-    
-    
-                    //     elementoVueltas2.appendChild(li2)
-                    //     li2.appendChild(span2)
-                    //     span2.appendChild(spanText2)
-
-                    // }
-                    
-                   
-
         }
 
            
@@ -311,6 +238,12 @@ let showMeCounter = () => {
     isClassof("playChronometer")
     isClassof("playTimer")
     isClassof("spanBasticSimple")
+    isClassof("countChronometer")
+    isClassof("vueltasMarcadas")
+    isClassof("stopChronometer")
+    isClassof("countChronometer")
+
+    
     isClassof("spanBasticDoble")
     visibilityOff("playTimer")
     visibilityOff("playChronometer")
@@ -340,6 +273,23 @@ let showMeTime = () => {
     visibilityOn("decreaseButton")
     visibilityOn("resetButton")
     visibilityOn("increaseButton")
+
+    let mouseOverSeconds = document.getElementById("spanText")
+    let valueOfSeconds = mouseOverSeconds.textContent
+    
+
+    let mouseOverMinutes = document.getElementById("spanText-minutes")
+    let valueOfMinutes = mouseOverMinutes.textContent
+    
+
+    let mouseOverOurs = document.getElementById("spanText-centecimal")
+    let valueOfOurs = mouseOverOurs.textContent
+    if (valueOfOurs !== 0 || valueOfMinutes !== 0 ||  valueOfSeconds !== 0) {
+        visibilityOn("playTimer")
+        visibilityOn("playChronometer")
+        isClassOn("playChronometer")
+        isClassOn("playTimer")
+    }
 }
 
 let convertTextColor = (event) => {
@@ -355,8 +305,14 @@ let convertTextColor = (event) => {
 
 let convertTextInInput = (e) => {
     let getTextOfDom = document.getElementById(e.target.id)
-    let textOfDom = getTextOfDom.textContent = e.target.value
+    // Number.isNaN(getTextOfDom) ? getTextOfDom.textContent = 0:console.log("acá no hay nan");
 
+    // let textOfDom = getTextOfDom.textContent = e.target.value
+    // let textOfDom = getTextOfDom.textContent = 0;
+
+    let getSpamWithValueOfDom = getTextOfDom.lastChild
+    console.log(getSpamWithValueOfDom);
+    // getSpamWithValueOfDom.setAttribute("class", "off")
     // textOfDom.setAttribute("class", "off")
     console.log(e.target.id);
 
@@ -393,7 +349,9 @@ let convertTextInInput = (e) => {
     console.log( getTextOfDom);
     getTextOfDom.removeEventListener("click", convertTextInInput, false )
     getTextOfDom.addEventListener("change", createNewTextAfterInput)
-    
+    // getTextOfDom.addEventListener("focusin", blurEvent )
+    createInputElement.addEventListener("focusout", blurEvent )
+    getTextOfDom.addEventListener("focusout", blurEvent )
     
 
 }
@@ -487,11 +445,99 @@ let createNewTextAfterInput = (e) =>{
     return getTextOfDom
 }
 
-// 
+let blurEvent = (e) =>{
+    console.log("llegamos al evento blur");
+    let getTextOfDomValueInput = document.getElementById(e.target.id)
+    console.log(getTextOfDomValueInput.id);
+    let newValueOfTarget = e.target.value;
+    let getTextOfDom;
+    switch(getTextOfDomValueInput.id) {
+        case 'seconds-Id':
+            getTextOfDom = document.getElementById("spanText")  
+          break;
+        case 'minutes-Id':
+             getTextOfDom = document.getElementById("spanText-minutes")
+          break;
+        case 'centecimal-Id':
+            getTextOfDom = document.getElementById("spanText-centecimal")
+          break;
+      }
+
+
+    // console.log(getTextOfDom);
+      if (newValueOfTarget.length === 0) {
+        getTextOfDom.textContent = 0;
+        
+        let mouseOverSeconds = document.getElementById("spanText")
+        let valueOfSeconds = mouseOverSeconds.textContent
+        mouseOverSeconds.addEventListener("click", convertTextInInput )
+        
+        let mouseOverMinutes = document.getElementById("spanText-minutes")
+        let valueOfMinutes = mouseOverMinutes.textContent
+        mouseOverMinutes.addEventListener("click", convertTextInInput )
+
+        let mouseOverOurs = document.getElementById("spanText-centecimal")
+        let valueOfOurs = mouseOverOurs.textContent
+        mouseOverOurs.addEventListener("click", convertTextInInput )
+
+        if ( valueOfSeconds == 0 && valueOfMinutes == 0 && valueOfOurs == 0) {
+            isClassof("playChronometer")
+            isClassof("playTimer") 
+            // visibilityOn("playTimer")
+            visibilityOn("playChronometer")
+            isClassof("countChronometer")
+            // visibilityOff("spanRegularCounter")
+
+
+        }
 
 
 
-export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff, showMeCounter, showMeTime, convertTextColor, convertTextInInput}
+        return getTextOfDom;
+    } else {
+
+
+        let newValueOfDomByPrompt = getTextOfDom.textContent = newValueOfTarget;
+        isClassOn("playChronometer")
+        isClassOn("playTimer")
+        console.log(newValueOfDomByPrompt);
+        // if (getTextOfDomValueInput.textContent === " "|| getTextOfDom.textContent === " ") {
+        //     getTextOfDom.textContent = 0;        
+        // }
+        
+        // let newValueOfText =parseInt(getTextOfDomValueInput.textContent);
+        // let textOfDom = getTextOfDom.textContent = getTextOfDomValueInput.value;
+        // console.log(typeof newValueOfText);
+        // console.log( newValueOfText);
+        
+        
+        // getTextOfDomValueInput.addEventListener("click", convertTextInInput)
+        // mouseOverSeconds = getTextOfDomValueInput.value;
+    
+        let mouseOverSeconds = document.getElementById("spanText")
+    
+        mouseOverSeconds.addEventListener("click", convertTextInInput )
+        
+        let mouseOverMinutes = document.getElementById("spanText-minutes")
+          
+        mouseOverMinutes.addEventListener("click", convertTextInInput )
+    
+        let mouseOverOurs = document.getElementById("spanText-centecimal")
+    
+        mouseOverOurs.addEventListener("click", convertTextInInput )
+    
+        // let newValueOfText =getTextOfDom.textContent;
+        // console.log(newValueOfText);
+    }
+
+
+    return getTextOfDom
+}
+
+
+
+export { getElementByIdFunc, isClassOn, isClassof, diferenceBetweenTimes, visibilityOn, visibilityOff, 
+    showMeCounter, showMeTime, convertTextColor, convertTextInInput, blurEvent}
 
 
 

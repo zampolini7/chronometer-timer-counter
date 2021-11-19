@@ -16,6 +16,8 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 isClassOn("stopChronometer")
                 isClassof("playChronometer")
                 isClassof("countChronometer")
+                isClassof("regularCounter")
+
                 isClassof("playTimer")
                 visibilityOff("playChronometer")
                 // isClassof("countChronometer")
@@ -49,6 +51,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 valueOfTextCentecimal.addEventListener("click", convertTextInInput )
                 valueOfText.addEventListener("click", convertTextInInput )
                 valueOfTextMinutes.addEventListener("click", convertTextInInput )
+                
                 
 
                 console.log(valueOfTextInt);
@@ -126,6 +129,8 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
 
             isClassOn("playChronometer")
             isClassof("stopChronometer")
+            isClassOn("regularCounter")
+
             
         }
 

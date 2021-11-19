@@ -2,7 +2,7 @@ import { increaseNumber, decreaseNumber , resetNumber } from "../counter/counter
 import { increaseNumberCounter, decreaseNumberCounter , resetNumberCounter } from "../counter/counter2.js";
 import { digitalClock } from "../chronometer/chronometer.js";
 import { Timer } from "../timer/timer.js";
-import { showMeCounter, showMeTime, convertTextColor, convertTextInInput } from "../functions/functions.js";
+import { showMeCounter, showMeTime, convertTextColor, convertTextInInput, blurEvent } from "../functions/functions.js";
 import { increaseNumberDecimal, decreaseNumberDecimal , resetNumberDecimal } from "../counter/counterChronometer.js";
 
 
@@ -40,7 +40,7 @@ export function eventCaller() {
 
     let mouseOverSeconds = document.getElementById("spanText")
     mouseOverSeconds.addEventListener("click", convertTextInInput )
-
+    mouseOverSeconds.addEventListener("blur", blurEvent )
 
 
 

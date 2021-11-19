@@ -16,6 +16,9 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
 
                 isClassOn("stopChronometer")
                 isClassof("playChronometer")
+                isClassof("regularCounter")
+                
+
                 isClassOn("countChronometer")
                 isClassof("playTimer")
                 visibilityOff("playChronometer")
@@ -41,6 +44,7 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
             isClassOn("playChronometer")
             isClassof("stopChronometer")
             isClassOn("playTimer")
+            isClassOn("regularCounter")
 
             let mouseOverOurs = document.getElementById("spanText-centecimal")
             let mouseOverSeconds = document.getElementById("spanText")

@@ -3,15 +3,26 @@ import { getElementByIdFunc, isClassOn, isClassof } from "../functions/functions
 // Inicio Incrementar número del dom
 const increaseNumber = (e, increaseNumber) => {
     let valueOfText = document.getElementById("spanText")
-    let valueOfTextInt = parseInt(valueOfText.textContent)
+    
+    let valueOfTextInt;
+    // valueOfText.textContent === " "? valueOfTextInt = 0: 
+    // Number.isNaN(valueOfText) ? console.log("siga siga"):valueOfText.textContent = 0;
+
+    // Number.isNaN(valueOfText) ? valueOfText.textContent = 0 :console.log("siga siga");
+
+    valueOfTextInt = parseInt(valueOfText.textContent);
+
+    
     let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1;
 
     let valueOfTextMinutes = document.getElementById("spanText-minutes")
+
+    // Number.isNaN(valueOfTextMinutes) ? console.log("siga siga"):valueOfTextMinutes.textContent = 0;
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
     
     
-    let valueOfTextCentecimal = document.getElementById("spanText-minutes")
-    let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
+    // let valueOfTextCentecimal = document.getElementById("spanText-minutes")
+    // let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)
     // let valueModifiedOfText = valueOfText.innerText = valueOfTextInt + 1;
 
     console.log(valueOfMinutes)
@@ -34,9 +45,9 @@ const increaseNumber = (e, increaseNumber) => {
         // increaseNumber()
     }
 
-    if (valueOfCentecimal > 99) {
-        valueOfText.innerText = valueOfTextInt + 1;
-    }
+    // if (valueOfCentecimal > 99) {
+    //     valueOfText.innerText = valueOfTextInt + 1;
+    // }
 
 
 
