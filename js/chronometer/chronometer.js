@@ -65,6 +65,10 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
             visibilityOn("playChronometer")
             isClassOn("regularCounter")
 
+            mouseOverSeconds.removeEventListener("click", convertTextInInput, false )
+            mouseOverMinutes.removeEventListener("click", convertTextInInput, false )
+            mouseOverOurs.removeEventListener("click", convertTextInInput, false )
+
             let clearCounter = document.getElementById("vueltasMarcadas")
             clearCounter.innerHTML = `
             <div id="vueltasMarcadas" >
