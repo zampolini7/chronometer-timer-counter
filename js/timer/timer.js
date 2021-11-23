@@ -130,6 +130,8 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             isClassOn("playChronometer")
             isClassof("stopChronometer")
             isClassOn("regularCounter")
+            isClassOn("regularCounter")
+
 
             
         }
@@ -147,6 +149,8 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             visibilityOn("decreaseButton")
             isClassOn("decreaseButton")
             isClassOn("increaseButton")
+            isClassOn("regularCounter")
+
             let clearCounter = document.getElementById("vueltasMarcadas")
             clearCounter.innerHTML = `
             <div id="vueltasMarcadas" >
@@ -187,6 +191,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             isClassOn("decreaseButton")
             isClassOn("increaseButton")
             isClassof("resetTempo")
+            isClassOn("regularCounter")
 
       
 
