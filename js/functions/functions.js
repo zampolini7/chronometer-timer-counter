@@ -72,6 +72,7 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
            span.setAttribute("class", "li-span-class")
            
            
+           
 
            let spanText = d.createTextNode(` ${valueOfTextMinutes}  : ${ valueOfTextSeconds} : ${valueOfCentecimal}` )
            let elementoVueltas = d.getElementById(id1)
@@ -129,6 +130,7 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
                     li2.setAttribute("class", "li-class")
                     let span2 = d.createElement("span")
                     span2.setAttribute("class", "li-span-class")
+                  
                     
                     
                     let resultadoRestaDeTiemposMin = (valueOfTextMinutes ) 
@@ -144,7 +146,11 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
                     elementoVueltas2.appendChild(li2)
                     li2.appendChild(span2)
                     span2.appendChild(spanText2)
-                    
+                    li2.setAttribute("id", "valueofvuelt")
+                    let input = d.createElement("input")
+                    input.setAttribute("class", "input off")
+                    li2.appendChild(input)
+                    // li2.addEventListener("click", console.log("Llegamos al input gua8"))
 
                     // elementoVueltas2.addEventListener("click", openSpan())
 
@@ -220,10 +226,17 @@ let diferenceBetweenTimes = (id1, id2,  ) => {
                         li2.appendChild(span2)
                         span2.appendChild(spanText2)
                         // console.log(resultadoRestaDeTiemposSec);
-        
-                            
-
-                    
+                        let input = d.createElement("input")
+                        input.setAttribute("class", "input off")
+                        li2.appendChild(input)
+                        // li2.setAttribute("id", "ElidPoderoso")
+                        
+                        let log = () => {
+                            console.log("llegaste al input");
+                            input.setAttribute("class", "input on")
+                        }
+                        
+                        li2.addEventListener("click", log)
         }
 
            
@@ -262,6 +275,9 @@ let showMeTime = () => {
     isClassof("spanRegularCounter")
     isClassOn("spanBasticSimple")
     isClassOn("spanBasticDoble")
+    isClassOn("vueltasMarcadas")
+    isClassOn("countChronometer")
+    
 
 
     visibilityOn("playTimer")
@@ -308,7 +324,7 @@ let convertTextInInput = (e) => {
     // Number.isNaN(getTextOfDom) ? getTextOfDom.textContent = 0:console.log("acá no hay nan");
 
     // let textOfDom = getTextOfDom.textContent = e.target.value
-    // let textOfDom = getTextOfDom.textContent = 0;
+    let textOfDom = getTextOfDom.textContent = "";
 
     let getSpamWithValueOfDom = getTextOfDom.lastChild
     console.log(getSpamWithValueOfDom);
@@ -349,6 +365,8 @@ let convertTextInInput = (e) => {
     console.log( getTextOfDom);
     getTextOfDom.removeEventListener("click", convertTextInInput, false )
     getTextOfDom.addEventListener("change", createNewTextAfterInput)
+    createInputElement.focus()
+
     // getTextOfDom.addEventListener("focusin", blurEvent )
     createInputElement.addEventListener("focusout", blurEvent )
     getTextOfDom.addEventListener("focusout", blurEvent )
@@ -364,7 +382,7 @@ let createNewTextAfterInput = (e) =>{
     let getTextOfDom;
     switch(getTextOfDomValueInput.id) {
         case 'seconds-Id':
-            getTextOfDom = document.getElementById("spanText")  
+            getTextOfDom = document.getElementById("spanText")
           break;
         case 'minutes-Id':
              getTextOfDom = document.getElementById("spanText-minutes")

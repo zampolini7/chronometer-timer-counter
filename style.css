@@ -75,6 +75,8 @@
     background-color: inherit;
     border: 0.5px solid bisque;
     color: inherit;
+    text-align: center;
+    padding-left: 2px;
 }
 
 .span-cyt.text{
@@ -83,11 +85,12 @@
 .span-cyt.text.on {
     display: flex;
 }
-.input-radio-button.on{
+.input-radio-button.on, .vueltas.on {
     display: inline;
 }
 
-.span-cyt.text.off, .input-radio-button.off{
+
+.span-cyt.text.off, .input-radio-button.off, .vueltas.off{
     display: none;
 }
 
@@ -184,7 +187,7 @@
     justify-content: center;
 }
 
-.button.cyt.stop.off{
+.button.cyt.stop.off, input.off{
     display: none;
 }
 
@@ -237,7 +240,7 @@
 .button.decrease.visibilityOff, button.increase.visibilityOff, .button.reset.visibilityOff{
     display: none;
 }
-.button.decrease.visibilityOn, button.increase.visibilityOn, .button.reset.visibilityOn{
+.button.decrease.visibilityOn, button.increase.visibilityOn, .button.reset.visibilityOn, input.on{
     /* display: flex; */
     margin: o auto;
     align-items: center;

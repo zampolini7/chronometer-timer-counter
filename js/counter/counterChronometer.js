@@ -3,7 +3,8 @@ import { getElementByIdFunc, isClassOn, isClassof } from "../functions/functions
 // Inicio Incrementar número del dom
 const increaseNumberDecimal = (e, increaseNumber) => {
     let valueOfText = document.getElementById("spanText")
-    Number.isNaN(valueOfText) ? valueOfText.textContent = 0 : console.log("siga siga");
+
+
     let valueOfTextInt = parseInt(valueOfText.textContent)
     // let valueModifiedOfText = valueOfTextInt + 1;
 
@@ -12,6 +13,8 @@ const increaseNumberDecimal = (e, increaseNumber) => {
     let valueOfTextMinutes = document.getElementById("spanText-minutes")
     let valueOfMinutes = parseInt(valueOfTextMinutes.textContent)
     
+    // Number.isNaN(valueOfText) ? console.log("siga siga"):valueOfText.textContent = 0;
+    // Number.isNaN(valueOfText) ? valueOfText.textContent = 0 :console.log("siga siga");
     
     let valueOfTextCentecimal = document.getElementById("spanText-centecimal")
     let valueOfCentecimal = parseInt(valueOfTextCentecimal.textContent)

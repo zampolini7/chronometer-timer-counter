@@ -94,7 +94,7 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
             let visibleEraserCounter = document.getElementById("EraseCounterChronometer")
             isClassOn("EraseCounterChronometer")
 
-
+            
             // new Promise((resolve, reject) => {
             //     diferenceBetweenTimes(() => resolve("resultado"))
             //   })
