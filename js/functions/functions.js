@@ -493,7 +493,7 @@ let blurEvent = (e) =>{
 
       let mouseOverSeconds = document.getElementById("spanText")
       let valueOfSeconds = mouseOverSeconds.textContent
-      
+      console.log(valueOfSeconds);
       
       let mouseOverMinutes = document.getElementById("spanText-minutes")
       let valueOfMinutes = mouseOverMinutes.textContent
@@ -564,8 +564,29 @@ let blurEvent = (e) =>{
         let mouseOverOurs = document.getElementById("spanText-centecimal")
     
         mouseOverOurs.addEventListener("click", convertTextInInput )
+
+      
+        let valueOfSeconds = mouseOverSeconds.textContent
+        let valueOfMinutes = mouseOverMinutes.textContent
+        let valueOfOurs = mouseOverOurs.textContent
+        console.log(valueOfOurs);
+        console.log(valueOfSeconds);
+        console.log(valueOfMinutes);
+
     
+
+        if ( valueOfSeconds == 0 && valueOfMinutes == 0 && valueOfOurs == 0) {
+            isClassof("playChronometer")
+            isClassof("playTimer") 
+            // visibilityOn("playTimer")
+            visibilityOn("playChronometer")
+            isClassof("countChronometer")
+            // visibilityOff("spanRegularCounter")
   
+  
+        }
+    
+        
     }
 
 
