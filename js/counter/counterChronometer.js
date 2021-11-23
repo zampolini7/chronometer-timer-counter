@@ -21,8 +21,8 @@ const increaseNumberDecimal = (e, increaseNumber) => {
     valueOfTextCentecimal.innerHTML = valueOfCentecimal + 1;
     // let valueModifiedOfTextCentecimal = valueOfTextCentecimal.innerText = valueOfCentecimal + 1;
 
-    console.log(valueOfMinutes)
-    console.log(valueOfTextInt)
+    // console.log(valueOfMinutes)
+    // console.log(valueOfTextInt)
     // console.log(valueModifiedOfText);
 
     if (valueOfMinutes > 0 || valueOfTextInt > 0 || valueOfCentecimal > 0 ) {
@@ -39,7 +39,7 @@ const increaseNumberDecimal = (e, increaseNumber) => {
 
         valueOfText.innerText = valueOfTextInt + 1;
         valueOfTextCentecimal.innerHTML = 0;
-        console.log("aca si entro");
+        // console.log("aca si entro");
 
     }
     
@@ -89,7 +89,7 @@ function decreaseNumberDecimal(e) {
         
         valueOfText.innerText = valueOfTextInt -1;
         valueOfTextCentecimal.innerHTML = 99;
-        console.log("aca si entro");
+        // console.log("aca si entro");
         
     }
     
@@ -106,7 +106,7 @@ function decreaseNumberDecimal(e) {
 
 // Inicio resetear contador
 const resetNumberDecimal = (e) => {
-    console.log("tamo bien");
+    // console.log("tamo bien");
     let valueOfTextSeconds= document.getElementById("spanText")
     let valueModifiedOfTextSeconds = valueOfTextSeconds.innerText = 0;
     let valueOfTextMinutes= document.getElementById("spanText-minutes")

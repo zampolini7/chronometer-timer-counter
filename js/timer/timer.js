@@ -36,7 +36,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             
             
             function stopCounter(e) {
-                console.log("tamo bien");
+            
                 let valueOfText = document.getElementById("spanText");
                 let valueOfTextInt = parseInt(valueOfText.textContent)
 
@@ -54,7 +54,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
                 
                 
 
-                console.log(valueOfTextInt);
+                
                 // visibilityOn("playChronometer")
                
             
@@ -125,7 +125,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
 
         if(e.target.matches(btnStop)) {
             clearInterval(chronometer)
-            console.log("se escucha el evento");
+            
 
             isClassOn("playChronometer")
             isClassof("stopChronometer")
@@ -137,7 +137,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
         if(e.target.matches(reset)) {
             clearInterval(chronometer)
             clearInterval(changeColor)
-            console.log("se escucha el evento");
+            
             isClassof("stopChronometer")
             isClassof("playChronometer")
             isClassof("countChronometer")
@@ -188,20 +188,7 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             isClassOn("increaseButton")
             isClassof("resetTempo")
 
-           
-            // isClassof("stopChronometer")
-            // isClassof("playChronometer")
-            // isClassof("countChronometer")
-            // isClassof("playTimer")
-            // isClassof("resetTempo")
-            // visibilityOn("playTimer")
-            // visibilityOn("increaseButton")
-            // visibilityOn("decreaseButton")
-            // isClassOn("decreaseButton")
-            // isClassOn("increaseButton")
-            // isClassOn("resetButton")
-            // isClassOn("playChronometer")
-            // visibilityOff("playChronometer")
+      
 
             let clearCounter = document.getElementById("vueltasMarcadas")
             clearCounter.innerHTML = `
@@ -235,40 +222,6 @@ export function Timer(btnPlay, btnStop, reset, resetTempo, count, eraseCount) {
             isClassOn("EraseCounterChronometer")
 
 
-            // new Promise((resolve, reject) => {
-            //     diferenceBetweenTimes(() => resolve("resultado"))
-            //   })
-            // .finally(() => alert("Promesa lista"))
-            // .then(result =>  openSpan = () => {
-            //         let addEventListenerCharged = document.getElementsByClassName(".li-span-class")
-                    
-            //         addEventListenerCharged.classLis.contains(".li-span-class") ? addEventListenerCharged.addEventListener("click", openSpan) : 
-            //         console.log("siga, siga") ;
-                    
-            //         console.log("llegamos al evento open");
-            //         // let createSpan = document.createElement("input")
-            //         // createSpan.setAttribute("type", "text")
-            //         // createSpan.setAttribute("class", "span-li-dont-Me-LaCountIt")
-                    
-                    
-            //     });
-
-
-            // let openSpan = () => {
-            //     let addEventListenerCharged = document.getElementsByClassName(".li-span-class")
-                
-            //     addEventListenerCharged.classLis.contains(".li-span-class") ? addEventListenerCharged.addEventListener("click", openSpan) : 
-            //     console.log("siga, siga") ;
-                
-            //     console.log("llegamos al evento open");
-            //     // let createSpan = document.createElement("input")
-            //     // createSpan.setAttribute("type", "text")
-            //     // createSpan.setAttribute("class", "span-li-dont-Me-LaCountIt")
-                
-                
-            // }
-            // openSpan()
-            
          
             
         }

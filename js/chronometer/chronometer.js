@@ -39,7 +39,7 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
 
         if(e.target.matches(btnStop)) {
             clearInterval(chronometer)
-            console.log("se escucha el evento");
+            
 
             isClassOn("playChronometer")
             isClassof("stopChronometer")
@@ -58,11 +58,13 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
 
         if(e.target.matches(reset)) {
             clearInterval(chronometer)
-            console.log("se escucha el evento");
+            
             isClassof("stopChronometer")
             isClassof("playChronometer")
             isClassof("countChronometer")
             visibilityOn("playChronometer")
+            isClassOn("regularCounter")
+
             let clearCounter = document.getElementById("vueltasMarcadas")
             clearCounter.innerHTML = `
             <div id="vueltasMarcadas" >
