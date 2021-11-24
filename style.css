@@ -235,6 +235,7 @@
 .container-h3-button-vueltasMarcadas{
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .button.decrease.visibilityOff, button.increase.visibilityOff, .button.reset.visibilityOff{
@@ -247,4 +248,8 @@
     text-align: center;
     justify-content: center;
     /* flex-direction: row; */
+}
+
+.input.on {
+    margin-left: 15px;
 }
