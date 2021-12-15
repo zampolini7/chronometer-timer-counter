@@ -18,6 +18,10 @@ export function digitalClock(btnPlay, btnStop, reset, count, eraseCount) {
                 isClassof("playChronometer")
                 isClassof("regularCounter")
                 
+                visibilityOn("countChronometer")
+                visibilityOn("vueltasMarcadas")
+                isClassOn("vueltasMarcadas")
+
 
                 isClassOn("countChronometer")
                 isClassof("playTimer")

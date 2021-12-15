@@ -300,11 +300,21 @@ let showMeTime = () => {
 
     let mouseOverOurs = document.getElementById("spanText-centecimal")
     let valueOfOurs = mouseOverOurs.textContent
-    if (valueOfOurs !== 0 || valueOfMinutes !== 0 ||  valueOfSeconds !== 0) {
+
+    if (valueOfOurs != 0 || valueOfMinutes != 0 ||  valueOfSeconds != 0) {
         visibilityOn("playTimer")
         visibilityOn("playChronometer")
         isClassOn("playChronometer")
         isClassOn("playTimer")
+        console.log("entro al if");
+        console.log(valueOfOurs, valueOfMinutes, valueOfSeconds);
+    } else{
+        isClassof("playTimer")
+        isClassof("countChronometer")
+        isClassof("vueltasMarcadas")
+        isClassof("stopChronometer")
+        console.log(valueOfOurs, valueOfMinutes, valueOfSeconds);
+
     }
 }
 
