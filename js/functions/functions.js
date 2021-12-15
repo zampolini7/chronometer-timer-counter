@@ -411,7 +411,7 @@ let createNewTextAfterInput = (e) =>{
 
         let mouseOverOurs = document.getElementById("spanText-centecimal")
         let valueOfOurs = mouseOverOurs.textContent
-        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0") {
+        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0" || valueOfSeconds === "00" && valueOfMinutes === "00" && valueOfOurs === "00") {
             isClassof("playChronometer")
             isClassof("playTimer") 
             // visibilityOn("playTimer")
@@ -424,7 +424,7 @@ let createNewTextAfterInput = (e) =>{
 
 
     // console.log(getTextOfDom);
-      if (newValueOfTarget.length === 0) {
+      if (newValueOfTarget.length === 0 || newValueOfTarget === "00") {
         getTextOfDom.textContent = 0;
         
         let mouseOverSeconds = document.getElementById("spanText")
@@ -439,7 +439,7 @@ let createNewTextAfterInput = (e) =>{
         let valueOfOurs = mouseOverOurs.textContent
         mouseOverOurs.addEventListener("click", convertTextInInput )
 
-        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0") {
+        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0" ||valueOfSeconds === "00" && valueOfMinutes === "00" && valueOfOurs === "00") {
             isClassof("playChronometer")
             isClassof("playTimer") 
             // visibilityOn("playTimer")
@@ -513,7 +513,7 @@ let blurEvent = (e) =>{
       let valueOfOurs = mouseOverOurs.textContent
       
 
-      if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0") {
+      if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0" || valueOfSeconds === "00" && valueOfMinutes === "00" && valueOfOurs === "00") {
           isClassof("playChronometer")
           isClassof("playTimer") 
           // visibilityOn("playTimer")
@@ -540,7 +540,7 @@ let blurEvent = (e) =>{
         let valueOfOurs = mouseOverOurs.textContent
         mouseOverOurs.addEventListener("click", convertTextInInput )
 
-        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0") {
+        if ( valueOfSeconds === "0" && valueOfMinutes === "0" && valueOfOurs === "0" || valueOfSeconds === "00" && valueOfMinutes === "00" && valueOfOurs === "00") {
             isClassof("playChronometer")
             isClassof("playTimer") 
             // visibilityOn("playTimer")
@@ -585,7 +585,7 @@ let blurEvent = (e) =>{
 
     
 
-        if ( valueOfSeconds == 0 && valueOfMinutes == 0 && valueOfOurs == 0) {
+        if ( valueOfSeconds == 0 && valueOfMinutes == 0 && valueOfOurs == 0 ||valueOfSeconds === "00" && valueOfMinutes === "00" && valueOfOurs === "00") {
             isClassof("playChronometer")
             isClassof("playTimer") 
             // visibilityOn("playTimer")
