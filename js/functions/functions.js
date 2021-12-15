@@ -277,6 +277,7 @@ let showMeTime = () => {
     isClassOn("spanBasticDoble")
     isClassOn("vueltasMarcadas")
     isClassOn("countChronometer")
+    isClassof("countChronometer")
     
 
 
